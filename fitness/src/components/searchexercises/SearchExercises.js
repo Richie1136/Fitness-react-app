@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Box, Button, Stack, TextField, Typography } from "@mui/material"
+import { fetchData, exerciseOptions, baseURL } from "../../utils/fetchData"
 
 
 const SearchExercises = () => {
@@ -12,7 +13,12 @@ const SearchExercises = () => {
 
   const handleClick = async () => {
     if (search) {
-      // const excercisesData = await fetch()
+      const exercisesData = await fetchData(`${baseURL}`, exerciseOptions)
+      const searchedExercises = exercisesData.filter((exercise) => exercise.name.toLowerCase().includes(search)
+        || exercise.target.toLowerCase().includes(search)
+        || exercise.equipment.toLowerCase().includes(search)
+        || exercise.bodyPart.toLowerCase().includes(search)
+      )
     }
   }
 
