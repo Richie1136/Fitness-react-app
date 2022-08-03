@@ -17,7 +17,7 @@ const SearchExercises = () => {
         Awesome Exercises You <br /> Should Know
       </Typography>
       <Box position="relative" mb="72px">
-        <TextField height='76px' value='' onChange={handleChange} placeholder="Search Exercises" />
+        <TextField sx={{ 'input': { fontWeight: '700', border: 'none', borderRadius: '4px' }, width: { lg: '1170px', xs: '350px' }, backgroundColor: '#fff', borderRadius: '40px' }} height='76px' value='' onChange={handleChange} placeholder="Search Exercises" type="text" />
       </Box>
     </Stack>
   )
