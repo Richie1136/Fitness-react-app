@@ -6,6 +6,18 @@ import { fetchData, exerciseOptions, baseURL } from "../../utils/fetchData"
 const SearchExercises = () => {
 
   const [search, setSearch] = useState('')
+  const [exercises, setExercises] = useState([])
+  const [bodyparts, setBodyParts] = useState([])
+
+
+  useEffect(() => {
+    const fetchExerciseData = async () => {
+      const response = await fetchData(`${baseURL}/bodyPartList`, exerciseOptions)
+      setBodyParts(['all', ...response])
+    }
+    fetchExerciseData()
+  }, [])
+
 
   const handleChange = (event) => {
     setSearch(event.target.value.toLowerCase())
@@ -19,6 +31,8 @@ const SearchExercises = () => {
         || exercise.equipment.toLowerCase().includes(search)
         || exercise.bodyPart.toLowerCase().includes(search)
       )
+      setSearch('')
+      setExercises(searchedExercises)
     }
   }
 
