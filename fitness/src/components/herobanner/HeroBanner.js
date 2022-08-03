@@ -1,4 +1,5 @@
-import { Box, Stack, Typography } from "@mui/material"
+import { Box, Stack, Typography, Button } from "@mui/material"
+import HeroBannerImage from '../../assets/images/banner.png'
 
 const HeroBanner = () => {
   return (
@@ -14,9 +15,11 @@ const HeroBanner = () => {
       >
         Sweat, Smile <br /> and Repeat
       </Typography>
-      <Typography fontSize="22px" lineHeight='35px'>
+      <Typography fontSize="22px" lineHeight='35px' mb='20px'>
         Check out the most effective exerises
       </Typography>
+      <Button variant="contained" color="error" href="#excerises">Explore Excerises</Button>
+      <img className="hero-banner-img" src={HeroBannerImage} alt='banner' />
     </Box>
   )
 }
