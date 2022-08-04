@@ -9,13 +9,11 @@ import { exerciseOptions, fetchData, baseURL } from "../../utils/fetchData"
 const Exercises = ({ setExercises, bodyPart, exercises }) => {
   console.log(exercises)
   return (
-    <Box id='exercises' sx={{ 'mt': { lg: '110px' } }} mt='50px' p='20px'>
-      <Typography variant='h3' mb='46px'>
-        Showing Results
-      </Typography>
-      <Stack direction='row' sx={{ 'gap': { lg: '110px', xs: '50px' } }} flexWrap='wrap' justifyContent='center'>
-        {exercises?.map(({ exercise, index }) => (
-          <ExerciseCard key={index} exercise={exercise} />
+    <Box id="exercises" sx={{ mt: { lg: '109px' } }} mt="50px" p="20px">
+      <Typography variant="h3" fontWeight="bold" sx={{ fontSize: { lg: '44px', xs: '30px' } }} mb="46px">Showing Results</Typography>
+      <Stack direction="row" sx={{ gap: { lg: '107px', xs: '50px' } }} flexWrap="wrap" justifyContent="center">
+        {exercises.map((exercise, idx) => (
+          <ExerciseCard key={idx} exercise={exercise} />
         ))}
       </Stack>
     </Box>
