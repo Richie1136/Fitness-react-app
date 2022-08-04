@@ -1,12 +1,12 @@
 import { Box } from "@mui/material"
 import BodyPart from "../bodypart/BodyPart"
 
-const HorizontalScrollBar = ({ data, BodyPart, setBodyPart }) => {
+const HorizontalScrollBar = ({ data, bodyPart, setBodyPart }) => {
   return (
     <div>
       {data.map((item) => (
         <Box key={item.id} itemId={item.id} title={item.id} m="0 40px">
-          <BodyPart item={item} BodyPart={BodyPart} setBodyPart={setBodyPart} />
+          <BodyPart item={item} bodyPart={bodyPart} setBodyPart={setBodyPart} />
         </Box>
       ))}
     </div>
