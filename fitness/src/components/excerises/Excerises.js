@@ -1,5 +1,5 @@
 
-const Excerises = () => {
+const Excerises = ({ setExercises, bodyPart, setBodyPart }) => {
   return (
     <div>Excerises</div>
   )
