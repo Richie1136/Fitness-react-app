@@ -1,5 +1,7 @@
+import { Typography, Stack, Button } from "@mui/material"
 
-const Detail = () => {
+
+const Detail = ({ excerciseDetail }) => {
   return (
     <div>Detail</div>
   )
