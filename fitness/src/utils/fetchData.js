@@ -8,6 +8,8 @@ export const exerciseOptions = {
 
 export const baseURL = 'https://exercisedb.p.rapidapi.com/exercises'
 
+export const baseYoutubeURL = 'https://youtube-search-and-download.p.rapidapi.com'
+
 export const fetchData = async (url, options) => {
   const response = await fetch(url, options)
   const data = response.json()
