@@ -15,7 +15,8 @@ const ExcerciseDetail = () => {
 
   useEffect(() => {
     const fetchExercisesData = async () => {
-      const exerciseDetailData = await fetchData(`${baseURL}/${id}`, exerciseOptions)
+
+      const exerciseDetailData = await fetchData(`${baseURL}/exercise/${id}`, exerciseOptions)
       setExcerciseDetail(exerciseDetailData)
     }
     fetchExercisesData()

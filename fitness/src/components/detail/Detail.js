@@ -1,9 +1,16 @@
 import { Typography, Stack, Button } from "@mui/material"
 
+import BodyPartImage from '../../assets/icons/body-part.png'
+import TargetImage from '../../assets/icons/target.png'
+import EquipmentImage from '../../assets/icons/equipment.png'
+
 
 const Detail = ({ excerciseDetail }) => {
+
   return (
-    <div>Detail</div>
+    <Stack gap='60px' sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
+      <img src={excerciseDetail.gifUrl} alt={excerciseDetail.name} loading='lazy' />
+    </Stack>
   )
 }
 
