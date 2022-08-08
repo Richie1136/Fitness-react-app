@@ -42,9 +42,9 @@ const Detail = ({ exerciseDetail }) => {
         {extraDetails?.map((item) => (
           <Stack key={item.name} direction='row' gap='24px' alignItems="center">
             <Button sx={{ backgroundColor: '#fff2db', borderRadius: '50%', width: '100px', height: '100px' }}>
-              <img src={item.icon} />
+              <img style={{ height: '50px', width: '50px' }} src={item.icon} alt={bodyPart} />
             </Button>
-            <Typography variant='h6'>
+            <Typography textTransform="capitalize" variant='h6'>
               {item.name}
             </Typography>
           </Stack>
