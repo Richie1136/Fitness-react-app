@@ -5,11 +5,12 @@ import Detail from "../detail/Detail"
 import ExerciseVideos from "../exercisevideos/ExerciseVideos"
 import SimilarExercises from "../similarexercises/SimilarExercises"
 
-import { fetchData, exerciseOptions, baseURL, baseYoutubeURL } from '../../utils/fetchData'
+import { fetchData, exerciseOptions, baseURL, baseYoutubeURL, videoOptions } from '../../utils/fetchData'
 
 const ExcerciseDetail = () => {
 
   const [exerciseDetail, setExerciseDetail] = useState({})
+  const [exerciseVideos, setExerciseVideos] = useState([])
 
   const { id } = useParams()
 
@@ -18,6 +19,9 @@ const ExcerciseDetail = () => {
 
       const exerciseDetailData = await fetchData(`${baseURL}/exercise/${id}`, exerciseOptions)
       setExerciseDetail(exerciseDetailData)
+      const exerciseVideosData = await fetchData(`${baseYoutubeURL}/search?q=${exerciseDetail.name}`, videoOptions)
+      console.log(exerciseVideosData)
+      setExerciseVideos(exerciseVideosData)
     }
     fetchExercisesData()
   }, [id])
@@ -26,7 +30,7 @@ const ExcerciseDetail = () => {
   return (
     <Box>
       <Detail exerciseDetail={exerciseDetail} />
-      <ExerciseVideos />
+      <ExerciseVideos exerciseVideos={exerciseVideos} name={exerciseDetail.name} />
       <SimilarExercises />
     </Box>
   )
