@@ -11,6 +11,21 @@ const Detail = ({ exerciseDetail }) => {
 
   const { gifUrl, name, bodyPart, equipment, target } = exerciseDetail
 
+  const extraDetails = [
+    {
+      icon: BodyPartImage,
+      name: bodyPart
+    },
+    {
+      icon: TargetImage,
+      name: target
+    },
+    {
+      icon: EquipmentImage,
+      name: equipment
+    },
+  ]
+
   return (
     <Stack gap='60px' sx={{ flexDirection: { lg: 'row' }, p: '20px', alignItems: 'center' }}>
       <img className="detail-image" src={gifUrl} alt={name} loading='lazy' />
@@ -24,6 +39,16 @@ const Detail = ({ exerciseDetail }) => {
           It will help deliver oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently.
           And when your heart and lung health improve, you have more energy to tackle daily chores.
         </Typography>
+        {extraDetails?.map((item) => (
+          <Stack key={item.name} direction='row' gap='24px' alignItems="center">
+            <Button>
+              <img src={item.icon} />
+            </Button>
+            <Typography variant='h6'>
+              {item.name}
+            </Typography>
+          </Stack>
+        ))}
       </Stack>
     </Stack>
   )
