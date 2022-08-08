@@ -41,7 +41,7 @@ const Detail = ({ exerciseDetail }) => {
         </Typography>
         {extraDetails?.map((item) => (
           <Stack key={item.name} direction='row' gap='24px' alignItems="center">
-            <Button>
+            <Button sx={{ backgroundColor: '#fff2db', borderRadius: '50%', width: '100px', height: '100px' }}>
               <img src={item.icon} />
             </Button>
             <Typography variant='h6'>
