@@ -1,5 +1,5 @@
 
-const SimilarExercises = () => {
+const SimilarExercises = ({ targetMuscleData, equipmentData }) => {
   return (
     <div>SimilarExercises</div>
   )
