@@ -7,7 +7,7 @@ const SimilarExercises = ({ targetMuscleData, equipmentData }) => {
 
   return (
     <Box sx={{ mt: { lg: '100px', xs: '0' } }}>
-      <Typography variant='h3'>
+      <Typography variant='h3' mb={5}>
         Exercises that target the same muscle group
         <Stack direction='row' sx={{ p: '2px', position: 'relative' }}>
           {targetMuscleData.length ?
@@ -15,8 +15,8 @@ const SimilarExercises = ({ targetMuscleData, equipmentData }) => {
             : <Loading />}
         </Stack>
       </Typography>
-      <Typography variant='h3'>
-        Exercises that target the same equipment group
+      <Typography variant='h3' mb={5}>
+        Exercises that use the same equipment group
         <Stack direction='row' sx={{ p: '2px', position: 'relative' }}>
           {equipmentData.length ?
             <HorizontalScrollbar data={equipmentData} />

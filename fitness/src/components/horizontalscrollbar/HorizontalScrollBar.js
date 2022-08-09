@@ -1,9 +1,9 @@
-import { Box, Typography } from "@mui/material"
 import BodyPart from "../bodypart/BodyPart"
-import { ScrollMenu, VisibilityContext } from "react-horizontal-scrolling-menu"
+import { ScrollMenu, VisibilityContext } from 'react-horizontal-scrolling-menu';
 import { useContext } from "react"
-import LeftArrowIcon from '../../assets/icons/left-arrow.png'
+import { Box, Typography } from '@mui/material';
 import RightArrowIcon from '../../assets/icons/right-arrow.png'
+import LeftArrowIcon from '../../assets/icons/left-arrow.png'
 import ExerciseCard from "../exercisecard/ExerciseCard"
 
 
