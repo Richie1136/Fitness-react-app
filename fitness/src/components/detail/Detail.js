@@ -29,7 +29,7 @@ const Detail = ({ exerciseDetail }) => {
       <img className="detail-image" src={gifUrl} alt={name} loading='lazy' />
       <Stack sx={{ gap: { lg: '35px', xs: '20px' } }}>
         <Typography variant='h3'>
-          <b>{name}</b>
+          <b style={{ textTransform: 'capitalize' }}>{name}</b>
         </Typography>
         <Typography variant='h6'>
           Exercises improve your muscle strength and boost your endurance. {" "}
