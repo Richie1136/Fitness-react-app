@@ -1,9 +1,13 @@
 import { Box, Stack, Typography } from "@mui/material"
-import Logo from '../../assets/images/Logo-1.png'
+import Logo from '../../assets/images/exerciseLogo.jpeg'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <Box mt='80px' bgcolor="#fff3f4">
+      <Stack gap='40px' alignItems="center" px='40px' pt='24px'>
+        <img style={{ height: '140px', width: '140px' }} src={Logo} />
+      </Stack>
+    </Box>
   )
 }
 
