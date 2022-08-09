@@ -11,8 +11,12 @@ import ExerciseCard from "../exercisecard/ExerciseCard"
 const LeftArrow = () => {
   const { scrollPrev } = useContext(VisibilityContext);
 
+  const handlePrev = () => {
+    scrollPrev()
+  }
+
   return (
-    <Typography onClick={() => scrollPrev()} className="right-arrow">
+    <Typography onClick={handlePrev} className="right-arrow">
       <img src={LeftArrowIcon} alt="right-arrow" />
     </Typography>
   );
@@ -21,8 +25,12 @@ const LeftArrow = () => {
 const RightArrow = () => {
   const { scrollNext } = useContext(VisibilityContext);
 
+  const handleNext = () => {
+    scrollNext()
+  }
+
   return (
-    <Typography onClick={() => scrollNext()} className="left-arrow">
+    <Typography onClick={handleNext} className="left-arrow">
       <img src={RightArrowIcon} alt="right-arrow" />
     </Typography>
   );
